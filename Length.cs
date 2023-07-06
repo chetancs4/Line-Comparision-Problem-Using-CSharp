@@ -36,21 +36,48 @@
             Console.Write("Enter value of y4: ");
             int y4 = Convert.ToInt32(Console.ReadLine());
 
-            int dx2 = x2 - x1;
-            int dy2 = y2 - y1;
+            int dx2 = x4 - x3;
+            int dy2 = y4 - y3;
             double lineLength2 = Math.Sqrt(dx2 * dx2 + dy2 * dy2);
 
             Console.WriteLine("Length is: " + lineLength2);
+            Console.WriteLine("--------------------------------------------------");
 
-            /*  Checking if the length of both the lines are equal or not.  */
+            /* Converting the values of line1 and line2
+		 * into string so that we can use equals and compare
+		 * method
+		 */
+            string Line_1 = lineLength1.ToString();
+            string Line_2 = lineLength2.ToString();
 
-            if (lineLength1 == lineLength2)
+            /*
+             * Checking if the length of both the lines are equal or not.
+             */
+            if (Line_1.Equals(Line_2))
             {
                 Console.WriteLine("Length of Line1 and Line2 are equal");
             }
             else
             {
                 Console.WriteLine("Length of Line1 and Line2 are not equal");
+            }
+            
+            Console.WriteLine("--------------------------------------------------");
+
+
+            /*
+             * Checking if the length of line 1 
+             * is less than or greater than line 2
+             */
+            int compare = Line_1.CompareTo(Line_2);
+
+            if (compare > 0)
+            {
+                Console.WriteLine("Line 1 is greater than Line 2");
+            }
+            else
+            {
+                Console.WriteLine("Line 1 is less than Line 2");
             }
         }
     }
