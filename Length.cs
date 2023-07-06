@@ -22,6 +22,5 @@
 
             Console.WriteLine("Length is: " + lineLength);
         }
-
     }
 }
